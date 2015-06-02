@@ -1,2 +1,3 @@
 # myconfig
-Some of my linux conf
+
+My personnal linux software configuration
