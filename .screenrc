@@ -1,0 +1,21 @@
+startup_message off     # set if you want to see copyright notice at startup (default on)
+vbellwait 0.1           # delay in seconds after each display of bell message (default 1s)
+vbell_msg "*ding*"      # Sets the visual bell message. (default "Wuff, Wuff!!")
+shell -$SHELL
+backtick 1 600 0 /bin/uname -sr
+sorendition "+b wr" # bold blanc sur rouge# When  any activity occurs in a background window that is being monitored
+
+vbell_msg " *wtf?!* "
+
+hardstatus alwayslastline "%{= bw} %{= bc}[%{-}%0c%{= bc}]%{-} [%-Lw%{= bW}%{+b}%50>%n%f* %t%{-b}%{= bw}%+Lw]%<"
+bind s eval "split" "focus down" "screen"
+
+# raccourcis pratique pour killer un split
+bind X remove
+bind x remove
+bindkey "^[[5C" next
+bindkey "^[[5D" prev
+
+# liste screen ouvert
+bind '$' windowlist -b
+termcapinfo xterm ti@:te@
